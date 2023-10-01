@@ -20,6 +20,7 @@ class CustomLineIndicatorBottomNavbar extends StatelessWidget {
   final double selectedIconSize;
   final double unselectedIconSize;
   final LinearGradient? gradient;
+  final String fontFamily;
 
   CustomLineIndicatorBottomNavbar({
     this.backgroundColor,
@@ -37,6 +38,7 @@ class CustomLineIndicatorBottomNavbar extends StatelessWidget {
     this.lineIndicatorWidth = 3,
     this.indicatorType = IndicatorType.Top,
     this.gradient,
+    required this.fontFamily,
   });
   @override
   Widget build(BuildContext context) {
@@ -70,6 +72,7 @@ class CustomLineIndicatorBottomNavbar extends StatelessWidget {
                   indicatorType: indicatorType,
                   index: i,
                   onTap: onTap,
+                  fontFamily: fontFamily,
                 ),
               ),
             ]
@@ -107,6 +110,7 @@ class CustomLineIndicatorBottomNavbarItems extends StatelessWidget {
   final bool enableLineIndicator;
   final double lineIndicatorWidth;
   final IndicatorType indicatorType;
+  final String fontFamily;
 
   CustomLineIndicatorBottomNavbarItems({
     this.icon,
@@ -124,6 +128,7 @@ class CustomLineIndicatorBottomNavbarItems extends StatelessWidget {
     this.enableLineIndicator = true,
     this.lineIndicatorWidth = 3,
     this.indicatorType = IndicatorType.Top,
+    required this.fontFamily,
   });
 
   @override
@@ -194,6 +199,8 @@ class CustomLineIndicatorBottomNavbarItems extends StatelessWidget {
                       color: currentIndex == index
                           ? selectedColor ?? bottomTheme.unselectedItemColor
                           : unSelectedColor,
+                      fontFamily: fontFamily
+
                     ),
                   ),
                 ],

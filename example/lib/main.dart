@@ -58,6 +58,7 @@ class _MyExampleState extends State<MyExample> {
         // gradient: LinearGradient(
         //   colors: [Colors.pink, Colors.yellow],
         // ),
+        fontFamily: 'Arial',
         customBottomBarItems: [
           CustomBottomBarItems(
             label: 'Home',
